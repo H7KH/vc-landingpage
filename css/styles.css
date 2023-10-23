@@ -32,6 +32,8 @@ p {
 /* Navigation */
 
 .navbar {
+  position: sticky;
+  top: 0;
   background: var(--colors-white);
   display: flex;
   flex-direction: row;
