@@ -152,16 +152,28 @@ p {
 /* Text animation */
 
 .animated__text {
-  color: var(--colors-secondary);
-  animation: color-change 1s linear 2s infinite alternate;
+  background: linear-gradient(
+    to right,
+    #fb6209 0%,
+    #faa405 25%,
+    #33b4ff 50%,
+    #2254a5 75%,
+    #fb6209 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: color-change 5s ease-in-out infinite alternate;
 }
 
 @keyframes color-change {
   from {
-    color: var(--colors-secondary);
+    background-position: 0% 50%;
   }
   to {
-    color: var(--colors-primary);
+    background-position: 100% 50%;
   }
 }
 
